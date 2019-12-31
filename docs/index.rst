@@ -1,8 +1,8 @@
-=======
-snapper
-=======
+=============
+axis_snapshot
+=============
 
-This is the documentation of **snapper**.
+This is the documentation of **axis_snapshot**.
 
 .. note::
 

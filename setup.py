@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    Setup file for snapper.
+    Setup file for axis_snapshot.
     Use setup.cfg to configure your project.
 
     This file was generated with PyScaffold 3.2.3.

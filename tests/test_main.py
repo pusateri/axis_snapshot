@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import pytest
-from snapper.skeleton import fib
+from axis_snapshot.main import fib
 
 __author__ = "Tom Pusateri"
 __copyright__ = "Tom Pusateri"
