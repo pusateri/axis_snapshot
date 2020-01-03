@@ -65,6 +65,11 @@ def parse_args(args):
         help="location name",
         metavar="NAME")
     parser.add_argument(
+        "-f",
+        "--force",
+        help="Force image request if not between sunrise/sunset",
+        action='store_true')
+    parser.add_argument(
         "-l",
         "--latitude",
         dest="latitude",
@@ -176,7 +181,7 @@ def main(args):
     now = datetime.utcnow()
     username, password = password_from_netrc(args.url)
 
-    if now > today.sunrise_time and now < today.sunset_time:
+    if args.force == True or (now > today.sunrise_time and now < today.sunset_time):
         where = tzwhere.tzwhere()
         timezone_str = where.tzNameAt(float(args.latitude), float(args.longitude))
         local_timezone = pytz.timezone(timezone_str)
